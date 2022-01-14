@@ -1,5 +1,5 @@
 setup:
-	python3 -m venv ~/.haus_me
+	python3 -m venv ~/.myrepo
 
 install:
 	pip install --upgrade pip &&\
