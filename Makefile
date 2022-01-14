@@ -6,11 +6,11 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=haus_me tests/*.py
+	python -m pytest -vv --cov=myrepo tests/*.py
 	python -m pytest --nbval notebook.ipynb
 
 
 lint:
-	pylint --disable=R,C haus_me
+	pylint --disable=R,C myrepo
 
 all: install lint test
