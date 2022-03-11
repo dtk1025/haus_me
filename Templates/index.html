@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		</div>
+        <h2>Predict if a house is a good value</h2>
+        <h3>Insert a few details and we instantly predict if the house is a good value or not</h3>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="/predict" method="POST">
+        <label for="sqft">Square Feet (i.e. 1100)</label><br>
+        <input type="text" id="sqft" name="sqft"><br>
+        <label for="homevalue">Home Value (i.e. 400000)</label><br>
+        <input type="text" id="homevalue" name="homevalue"><br><br/>
+		<input type="submit" class="btn-info" value="Predict">
+		
+    </form>
+    <br>
+    <h4>{{ prediction_text }}</h4>
+		
+	</div>
+
+
+</body>
+</html>
