@@ -12,7 +12,7 @@ def home():
 @app.route("/predict", methods=['POST'])
 def predict():
     dataset = pd.read_csv("haus_me-model.csv")
-    x = dataset.iloc[:. :-1].values
+    x = dataset.iloc[:, :-1].values
     y = dataset.iloc[:, -1:].values
     regressor=RandomForestClassifier(n_estimators=50, random_state=0)
 
